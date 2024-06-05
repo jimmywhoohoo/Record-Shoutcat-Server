@@ -35,6 +35,3 @@ Save Directory: The recordings are saved to a directory named recordings before 
 
 Troubleshooting
 Connection Errors: If the script cannot connect to the stream, it will print an error message and retry after 60 seconds.
-
-
-Replace `https://github.com/your-username/shoutcast-stream-recorder.git` with the actual URL of your GitHub repository. This `README.md` file provides an overview of the script, installation instructions, usage, configuration options, script explanation, example output, and troubleshooting tips.

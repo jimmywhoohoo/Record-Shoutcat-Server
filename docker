@@ -1,0 +1,27 @@
+# Use the official Python base image
+FROM python:3.9-slim
+
+# Set environment variables
+ENV STREAM_URL="http://localhost:8000/"
+ENV SAVE_DIRECTORY="/app/recordings"
+ENV RECORDING_DURATION="30"
+ENV RETENTION_PERIOD="30"
+ENV DROPBOX_ACCESS_TOKEN="***** add your own"
+
+# Install dependencies
+RUN apt-get update && apt-get install -y \
+    ffmpeg \
+ && rm -rf /var/lib/apt/lists/*
+
+# Set working directory
+WORKDIR /app
+
+# Copy requirements and install dependencies
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy the Python script
+COPY record_shoutcast.py /app/
+
+# Run the Python script
+CMD ["python", "record_shoutcast.py"]

@@ -21,7 +21,7 @@ This script records a Shoutcast stream in 30-minute segments, uploads the record
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/your-username/shoutcast-stream-recorder.git
+   git clone https://github.com/jimmywhoohoo/shoutcast-stream-recorder.git
    cd shoutcast-stream-recorder
 Create a virtual environment and activate it (optional but recommended):
 python -m venv venv
